@@ -1,0 +1,12 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+instance/
+*.db
+.pytest_cache/
+.env
+AGENTS.md
+.env.example
+instance/*.db
+.vscode/

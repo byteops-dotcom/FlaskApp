@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Create account — Task Forge{% endblock %}
+{% block content %}
+<section class="auth-layout register-layout">
+    <div class="auth-intro"><p class="eyebrow">Start with a little room</p><h1>Your best work<br><em>needs space.</em></h1><p class="lede">Build a private, focused board for the tasks that move your life forward.</p><div class="mini-stats"><div><strong>01</strong><span>Capture</span></div><div><strong>02</strong><span>Focus</span></div><div><strong>03</strong><span>Finish</span></div></div></div>
+    <div class="auth-card"><div class="card-kicker">Your fresh start</div><h2>Create your account</h2><p class="muted">No noise. Just your next move.</p>
+        <form method="post" class="auth-form"><label for="username">Choose a username</label><input id="username" name="username" value="{{ username|default('') }}" placeholder="e.g. alex_morgan" autocomplete="username" minlength="3" required><label for="password">Password</label><input id="password" name="password" type="password" placeholder="At least 6 characters" autocomplete="new-password" minlength="6" required><label for="confirmation">Confirm password</label><input id="confirmation" name="confirmation" type="password" placeholder="Type it once more" autocomplete="new-password" required><button class="button button-primary" type="submit">Create my space <span>→</span></button></form>
+        <p class="form-foot">Already have an account? <a href="{{ url_for('auth.login') }}">Sign in</a></p>
+    </div>
+</section>
+{% endblock %}
