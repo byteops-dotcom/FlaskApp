@@ -10,3 +10,7 @@ AGENTS.md
 .env.example
 instance/*.db
 .vscode/
+venv/
+__pycache__/
+*.pyc
+.env
