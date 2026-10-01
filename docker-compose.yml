@@ -1,0 +1,12 @@
+services:
+  task-forge:
+    build: .
+    container_name: task-forge-compose
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    volumes:
+      - task_forge_data:/app/instance
+
+volumes:
+  task_forge_data:
